@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import { AddCategory } from './components/AddCategory';
 
 function GifExpertApp(props) {
@@ -18,7 +17,7 @@ function GifExpertApp(props) {
             <h2>
                 GifExpertApp
             </h2>
-            <AddCategory/>
+            <AddCategory setCategories={setCategories}/>
             <hr />
            
             <ol>
@@ -28,10 +27,6 @@ function GifExpertApp(props) {
             </ol>
         </>
     )
-}
-
-GifExpertApp.propTypes = {
-
 }
 
 export default GifExpertApp
