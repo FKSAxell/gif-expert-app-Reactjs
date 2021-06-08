@@ -1,24 +1,26 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { AddCategory } from './components/AddCategory';
 
 function GifExpertApp(props) {
 
-    // const categories = ["Python", "Java", "Javascript"];
+    
 
     const [categories, setCategories] = useState(["Python", "Java", "Javascript"]);
 
-    const handleAdd =()=>{
-        // setCategories(["Axell",...categories]);
-        setCategories(cat => ["Axell",...cat]);
-    }
+    // const handleAdd =()=>{
+    //     // setCategories(["Axell",...categories]);
+    //     setCategories(cat => ["Axell",...cat]);
+    // }
 
     return (
         <>
             <h2>
                 GifExpertApp
             </h2>
+            <AddCategory/>
             <hr />
-            <button onClick={handleAdd}>Agregar</button>
+           
             <ol>
                 {categories.map((category) => {
                     return <li key={category}>{category}</li>;
