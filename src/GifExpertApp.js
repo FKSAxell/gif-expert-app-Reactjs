@@ -1,16 +1,12 @@
 import React, { useState } from 'react'
 import { AddCategory } from './components/AddCategory';
+import GifGrid from './components/GifGrid';
 
 function GifExpertApp(props) {
 
     
 
-    const [categories, setCategories] = useState(["Python", "Java", "Javascript"]);
-
-    // const handleAdd =()=>{
-    //     // setCategories(["Axell",...categories]);
-    //     setCategories(cat => ["Axell",...cat]);
-    // }
+    const [categories, setCategories] = useState(["Javascript"]);
 
     return (
         <>
@@ -22,7 +18,7 @@ function GifExpertApp(props) {
            
             <ol>
                 {categories.map((category) => {
-                    return <li key={category}>{category}</li>;
+                    return <GifGrid category={category} />;
                 })}
             </ol>
         </>
