@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 export const AddCategory = ({ setCategories }) => {
   const [inputValue, setInputValue] = useState("");
-  
+
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
@@ -17,6 +17,7 @@ export const AddCategory = ({ setCategories }) => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <p>{inputValue}</p>
       <input
         placeholder="Escribe algo..."
         onChange={handleInputChange}
